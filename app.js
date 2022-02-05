@@ -1,3 +1,4 @@
 import userInfo from "./users.js";
 
-userInfo(1);
+const sonuc = await userInfo(1);
+console.log(sonuc);

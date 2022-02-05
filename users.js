@@ -16,17 +16,17 @@ export default async (user_id) => {
         });
     }
 
-    (async () => {
+    const result = await (async () => {
         try{
             const users = await getUsers();
             const post = await getPost(1);
             users.posts = post;
-            console.log(users);
-            
+            return users;
         } catch (e) {
             console.log(e);
         }
+        
     })();
-
     
+    return result;
 }
